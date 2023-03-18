@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Programming School</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}">
+	<script src="{{ url_for('static',filename='js/script.js') }}"></script>
+</head>
+<body>
+    <header>
+		<h1><a href="http://127.0.0.1:5000/#">Online Programming School</a></h1>
+		<nav>
+			<ul>
+				<li><a href="http://127.0.0.1:5000/#courses">Courses</a></li>
+				<li><a href="http://127.0.0.1:5000/#about">About Us</a></li>
+				<li><a href="http://127.0.0.1:5000/#footer">Contact Us</a></li>
+				<li><a href="#">Log in</a></li>
+				<li><a href="#">Sign up</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main role="main" class="container">
+    	{% block content %}{% endblock %}
+	</main>
+</body>
+</html>

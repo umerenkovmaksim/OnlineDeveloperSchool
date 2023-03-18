@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block content %}
+
+<main>
+	<section class="banner">
+		<h2 class="banner-title">Welcome to our online programming school!</h2>
+		<p class="banner-text">Learn to code from the comfort of your own home with our expert instructors.</p>
+		<a href="http://127.0.0.1:5000/aboba" class="btn">View Courses</a>
+	</section>
+
+	<section class="features">
+		<h2>Why Choose Us?</h2>
+		<div class="feature">
+			<img src="{{ url_for('static',filename='img/schedule.jpg') }}" alt="Feature 1">
+			<h3>Expert Instructors</h3>
+			<p>Our instructors are experienced programmers who are passionate about teaching.</p>
+		</div>
+		<div class="feature">
+			<img src="{{ url_for('static',filename='img/schedule.jpg') }}" alt="Feature 2">
+			<h3>Flexible Schedule</h3>
+			<p>Take classes on your own schedule with our on-demand courses.</p>
+		</div>
+		<div class="feature">
+			<img src="{{ url_for('static',filename='img/schedule.jpg') }}" alt="Feature 3">
+			<h3>Hands-On Learning</h3>
+			<p>Learn by doing with our interactive coding exercises and projects.</p>
+		</div>
+	</section>
+
+	<section class="courses" id="courses">
+		<h2>Featured Courses</h2>
+		<ul>
+			<li>
+				<img src="course-1.jpg" alt="Course 1">
+				<h3>Intro to Web Development</h3>
+				<p>Learn the basics of HTML, CSS, and JavaScript and build your own website.</p>
+				<a href="#" class="btn">Enroll Now</a>
+			</li>
+			<li>
+				<img src="course-2.jpg" alt="Course 2">
+				<h3>Data Science with Python</h3>
+				<p>Learn how to use Python for data analysis and visualization.</p>
+				<a href="#" class="btn">Enroll Now</a>
+			</li>
+			<li>
+				<img src="course-3.jpg" alt="Course 3">
+				<h3>Mobile App Development</h3>
+				<p>Learn how to build native mobile apps for iOS and Android using React Native.</p>
+				<a href="#" class="btn">Enroll Now</a>
+			</li>
+		</ul>
+	</section>
+	<section class="cta">
+		<h2>Ready to start learning?</h2>
+		<a href="#" class="btn">View Courses</a>
+	</section>
+	<section class="about" id="about">
+		<h2>About Us</h2>
+		<p>Online Programming School was founded in 2023 with the goal of making programming education accessible to anyone with an internet connection. Our mission is to empower our students to become skilled programmers and advance their careers.</p>
+		<a href="#" class="btn">Learn More</a>
+	</section>
+</main>
+
+<footer id="footer">
+	<p>&copy; 2023 Online Programming School. All rights reserved.</p>
+</footer>
+{% endblock %}
