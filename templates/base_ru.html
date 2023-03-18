@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Онлайн Школа Программирования</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}">
+    <script src="{{ url_for('static',filename='js/script.js') }}"></script>
+</head>
+<body>
+    <header>
+        <h1><a href="{{host_url}}">Онлайн Школа Программирования</a></h1>
+        <div class="language-switcher">
+			<a href="{{host_url[:-2]}}en{{domen}}">RU</a>
+		</div>
+        <nav>
+            <ul>
+                <li><a href="{{host_url}}/#courses">Курсы</a></li>
+                <li><a href="{{host_url}}/#about">О нас</a></li>
+                <li><a href="{{host_url}}/#footer">Свяжитесь с нами</a></li>
+                <li><a href="#">Войти</a></li>
+                <li><a href="#">Зарегистрироваться</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main role="main" class="container">
+        {% block content %}{% endblock %}
+    </main>
+<footer id="footer">
+    <p>&copy; 2023 Онлайн Школа Программирования. Все права защищены.</p>
+</footer>
+</body>
+</html>

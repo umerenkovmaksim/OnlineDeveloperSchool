@@ -1,0 +1,62 @@
+{% extends "base_ru.html" %}
+{% block content %}
+
+<main>
+	<section class="banner">
+		<h2 class="banner-title">Добро пожаловать в нашу онлайн-школу программирования!</h2>
+		<p class="banner-text">Учите программирование не выходя из дома с нашими экспертными преподавателями.</p>
+		<a href="{{host_url}}/aboba" class="btn">Посмотреть курсы</a>
+	</section>
+  <section class="features">
+	<h2>Почему выбирают нас?</h2>
+	<div class="feature">
+		<img src="{{ url_for('static',filename='img/schedule.jpg') }}" alt="Функция 1">
+		<h3>Экспертные преподаватели</h3>
+		<p>Наши преподаватели - опытные программисты с хорошими навыками в данной сфере.</p>
+	</div>
+	<div class="feature">
+		<img src="{{ url_for('static',filename='img/schedule.jpg') }}" alt="Функция 2">
+		<h3>Гибкий график</h3>
+		<p>Занимайтесь решением задач в удобное для вас время с нашими курсами.</p>
+	</div>
+	<div class="feature">
+		<img src="{{ url_for('static',filename='img/schedule.jpg') }}" alt="Функция 3">
+		<h3>Практическое обучение</h3>
+		<p>Учитесь, создавая. С нашими интерактивными упражнениями по программированию и проектами.</p>
+	</div>
+</section>
+
+<section class="courses" id="courses">
+	<h2>Лучшие курсы</h2>
+	<ul>
+		<li>
+			<img src="course-1.jpg" alt="Курс 1">
+			<h3>Введение в веб-разработку</h3>
+			<p>Изучите основы HTML, CSS и JavaScript и создайте свой собственный веб-сайт.</p>
+			<a href="#" class="btn">Записаться</a>
+		</li>
+		<li>
+			<img src="course-2.jpg" alt="Курс 2">
+			<h3>Анализ данных с помощью Python</h3>
+			<p>Узнайте, как использовать Python для анализа и визуализации данных.</p>
+			<a href="#" class="btn">Записаться</a>
+		</li>
+		<li>
+			<img src="course-3.jpg" alt="Курс 3">
+			<h3>Разработка мобильных приложений</h3>
+			<p>Узнайте, как создавать нативные мобильные приложения для iOS и Android с помощью React Native.</p>
+			<a href="#" class="btn">Записаться</a>
+		</li>
+		</ul>
+	</section>
+	<section class="cta">
+		<h2>Готовы начать обучение?</h2>
+		<a href="{{host_url}}/aboba" class="btn">Посмотреть курсы</a>
+	</section>
+	<section class="about" id="about">
+		<h2>О нас</h2>
+		<p>Онлайн-школа программирования была основана в 2023 году с целью сделать образование в программировании доступным для всех, у кого есть доступ в интернет. Наша миссия - дать студентам возможность стать квалифицированными программистами и продвинуться в карьере.</p>
+		<a href="#" class="btn">Узнать больше</a>
+	</section>
+</main>
+{% endblock %}
