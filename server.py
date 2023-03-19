@@ -1,27 +1,37 @@
 from flask import Flask, render_template, redirect
 
+from data.db_session import global_init, create_session
+from data.login_form import LoginForm
+
 app = Flask(__name__)
 HOST = '127.0.0.1'
+server_url = 'http://127.0.0.1:5000/'
+app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
 
 
 @app.route('/')
-def main_web_page():
-    return redirect("http://127.0.0.1:5000/ru")
+def first_web_page():
+    return redirect(f'{server_url}ru')
 
 
-@app.route('/en')
-def main_web_page_en():
-    return render_template('main_page_en.html', host_url='http://127.0.0.1:5000/en', language='en', domen='')
+@app.route('/<language>')
+def main_web_page(language):
+    return render_template(f'main_page_{language}.html', host_url=f'{server_url}{language}', language=language,
+                           domen='')
 
 
-@app.route('/ru')
-def main_web_page_ru():
-    return render_template('main_page_ru.html', host_url='http://127.0.0.1:5000/ru', language='ru', domen='')
+@app.route('/<language>/login', methods=['GET', 'POST'])
+def login_form(language):
+    form = LoginForm()
+    if form.validate_on_submit():
+        return 'OK'
+    return render_template(f'login_form_{language}.html', host_url=f'{server_url}{language}', language=language,
+                           domen='/login', form=form)
 
 
 @app.route('/<language>/aboba')
 def aboba_page(language):
-    return render_template(f'aboba_{language}.html', host_url=f'http://127.0.0.1:5000/{language}', domen='/aboba',
+    return render_template(f'aboba_{language}.html', host_url=f'{server_url}{language}', domen='/aboba',
                            language=language)
 
 
@@ -32,3 +42,5 @@ def switch_language(language):
 
 if __name__ == '__main__':
     app.run(host=HOST)
+    global_init('db/OnlineDeveloperSchool.db')
+    session = create_session()

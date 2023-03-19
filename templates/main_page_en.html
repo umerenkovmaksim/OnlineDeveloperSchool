@@ -7,49 +7,71 @@
 		<p class="banner-text">Learn to code from the comfort of your own home with our expert instructors.</p>
 		<a href="{{host_url}}/aboba" class="btn">View Courses</a>
 	</section>
-
 	<section class="features">
 		<h2>Why Choose Us?</h2>
-		<div class="feature">
-			<img src="{{ url_for('static',filename='img/schedule.jpg') }}" alt="Feature 1">
-			<h3>Expert Instructors</h3>
-			<p>Our instructors are experienced programmers who are passionate about teaching.</p>
+		<div class="slider">
+		  <input type="radio" name="testimonial" id="tt-1">
+		  <input type="radio" name="testimonial" id="tt-2" checked>
+		  <input type="radio" name="testimonial" id="tt-3">
+		  <div class="testimonials">
+			<label class="item" for="tt-1">
+				<img src="{{ url_for('static',filename='img/expert.jpg') }}" alt="Feature 1">
+				<h3>Expert Instructors</h3>
+				<p>Our instructors are experienced programmers who are passionate about teaching.</p>
+			</label>
+			<label class="item" for="tt-2">
+				<img src="{{ url_for('static',filename='img/schedule.jpg') }}" alt="Feature 2">
+				<h3>Flexible Schedule</h3>
+				<p>Take classes on your own schedule with our on-demand courses.</p>
+			</label>
+			<label class="item" for="tt-3">
+				<img src="{{ url_for('static',filename='img/projects.jpg') }}" alt="Feature 3">
+				<h3>Hands-On Learning</h3>
+				<p>Learn by doing with our interactive coding exercises and projects.</p>
+			</label>
+		  </div>
+		  <div class="dots">
+			<label for="tt-1"></label>
+			<label for="tt-2"></label>
+			<label for="tt-3"></label>
+		  </div>
 		</div>
-		<div class="feature">
-			<img src="{{ url_for('static',filename='img/schedule.jpg') }}" alt="Feature 2">
-			<h3>Flexible Schedule</h3>
-			<p>Take classes on your own schedule with our on-demand courses.</p>
-		</div>
-		<div class="feature">
-			<img src="{{ url_for('static',filename='img/schedule.jpg') }}" alt="Feature 3">
-			<h3>Hands-On Learning</h3>
-			<p>Learn by doing with our interactive coding exercises and projects.</p>
-		</div>
-	</section>
 
+	</section>
 	<section class="courses" id="courses">
-		<h2>Featured Courses</h2>
-		<ul>
-			<li>
-				<img src="course-1.jpg" alt="Course 1">
+		<center><h2>Featured Courses</h2></center>
+		<div class="slider">
+		  <input type="radio" name="testimonial" id="t-1">
+		  <input type="radio" name="testimonial" id="t-2" checked>
+		  <input type="radio" name="testimonial" id="t-3">
+		  <div class="testimonials">
+			<label class="item" for="t-1">
+				<img src="{{ url_for('static',filename='img/course-1.jpg') }}" alt="Course 1">
 				<h3>Intro to Web Development</h3>
 				<p>Learn the basics of HTML, CSS, and JavaScript and build your own website.</p>
 				<a href="#" class="btn">Enroll Now</a>
-			</li>
-			<li>
-				<img src="course-2.jpg" alt="Course 2">
+			</label>
+			<label class="item" for="t-2">
+				<img src="{{ url_for('static',filename='img/course-2.jpg') }}" alt="Course 2">
 				<h3>Data Science with Python</h3>
 				<p>Learn how to use Python for data analysis and visualization.</p>
 				<a href="#" class="btn">Enroll Now</a>
-			</li>
-			<li>
-				<img src="course-3.jpg" alt="Course 3">
+			</label>
+			<label class="item" for="t-3">
+			    <img src="{{ url_for('static',filename='img/course-3.jpg') }}" alt="Course 3">
 				<h3>Mobile App Development</h3>
 				<p>Learn how to build native mobile apps for iOS and Android using React Native.</p>
 				<a href="#" class="btn">Enroll Now</a>
-			</li>
-		</ul>
+			</label>
+		  </div>
+		  <div class="dots">
+			<label for="t-1"></label>
+			<label for="t-2"></label>
+			<label for="t-3"></label>
+		  </div>
+		</div>
 	</section>
+
 	<section class="cta">
 		<h2>Ready to start learning?</h2>
 		<a href="{{host_url}}/aboba" class="btn">View Courses</a>

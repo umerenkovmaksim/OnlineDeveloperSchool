@@ -5,6 +5,8 @@
     <title>Online Programming School</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/carousel-1.css') }}">
+	<link rel="stylesheet" href="/path/to/flickity.css" media="screen">
 	<script src="{{ url_for('static',filename='js/script.js') }}"></script>
 </head>
 <body>
@@ -18,7 +20,7 @@
 				<li><a href="{{host_url}}/#courses">Courses</a></li>
 				<li><a href="{{host_url}}/#about">About Us</a></li>
 				<li><a href="{{host_url}}/#footer">Contact Us</a></li>
-				<li><a href="#">Log in</a></li>
+				<li id="login-btn" class="login-btn"><a href="{{host_url}}/login">Log in</a></li>
 				<li><a href="#">Sign up</a></li>
 			</ul>
 		</nav>
@@ -27,6 +29,7 @@
     	{% block content %}{% endblock %}
 	</main>
 <footer id="footer">
+	<a href="footer"></a>
 	<p>&copy; 2023 Online Programming School. All rights reserved.</p>
 </footer>
 </body>
